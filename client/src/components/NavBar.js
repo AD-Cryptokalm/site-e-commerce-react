@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "../styles/navBar.scss";
 
 export default function NavBar() {
@@ -8,8 +9,11 @@ export default function NavBar() {
           Livraison gratuite à partir de 50 euros<br/> en France Métropolitaine
         </div>
         <div className="navBar-topMenu flex">
+          <NavLink to="/account/login">
           <div className="navBar-topMenuLink">Se connecter </div>
+          </NavLink>
           <div> ou </div>
+    
           <div className="navBar-topMenuLink"> Créer un compte</div>
           <div className="navBar-topMenuLink">
             <i className="fa-solid fa-cart-shopping navBar-iconCart"></i>
@@ -32,7 +36,7 @@ export default function NavBar() {
               <input
                 type="search"
                 name="q"
-                value=""
+                defaultValue=""
                 aria-label="Rechercher"
                 className=""
                 placeholder="Rechercher"
@@ -45,9 +49,11 @@ export default function NavBar() {
       </div>
       <div className="navBar-bottom flex">
         <div className="navBar-bottomRight">
+          <NavLink to="/">
           <div className="navBar-bottomLogo">
             <img src="../images/logo.png" alt="logo entreprise" />
           </div>
+          </NavLink>
           <div className="navBar-bottomTitle">
             <h1>Mon Univers Enchanté</h1>
           </div>

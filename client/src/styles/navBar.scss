@@ -2,7 +2,9 @@
 
 .navBar {
    
-    
+    & a {
+        text-decoration: none;
+    }
     &-top{
         height: 6rem;
         padding: 0 8%;
@@ -20,9 +22,12 @@
     }
     &-topMenu div {
         margin-right: 0.9rem;
+        
+        color: white;
     }
     &-topMenuLink {
         cursor: pointer;
+       
     }
     &-formSearch {
         background: white;
@@ -72,6 +77,9 @@
         font-size: calc(1.5rem + 1vw);
         margin-right: 2.5rem;
         cursor: pointer;
+        &:hover {
+            filter: brightness(1.5);
+          }
     }
     
 }
