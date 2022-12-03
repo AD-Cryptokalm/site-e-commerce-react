@@ -4,13 +4,7 @@
       "email": "olivier@mail.com",
       "password": "$2a$10$DbU9lR2VNPFTx3kYGbC36uaYP0dqiIBAWXjwQ.M1X5tp5DblK00n6",
       "id": 1
-    },
-    {
-      "email": "test@mail.com",
-      "password": "$2a$10$2y7fDY0I4mY.dY3PPtS/MuRPsuZR9g3/eai3JthgMe9HGM9zgNQIK",
-      "firstname": "test",
-      "lastname": "test",
-      "id": 2
     }
+    
   ]
 }
