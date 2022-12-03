@@ -1,14 +1,14 @@
+import Categorie from "./components/Categorie";
 import NavBar from "./components/NavBar";
 import SlideAccueil from "./components/slideAccueil";
+import './styles/categorie.scss'
 
-
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <SlideAccueil/>
+      <NavBar />
+      <SlideAccueil />
+      <Categorie />
     </div>
   );
 }
-
-export default App;
