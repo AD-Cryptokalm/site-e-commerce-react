@@ -18,15 +18,16 @@ export default function NavBar() {
           <NavLink to="/account/register">
             <div className="navBar-topMenuLink"> Créer un compte</div>
           </NavLink>
+          <NavLink to="/cart">
           <div className="navBar-topMenuLink">
             <i className="fa-solid fa-cart-shopping navBar-iconCart"></i>
             Panier
           </div>
+          </NavLink>
           <div className="navBar-formSearch">
             <form action="/search" method="get" className="" role="search">
               <button type="submit" className="">
                 <i className="fa-solid fa-magnifying-glass "></i>
-                {/* <span class="fallback-text">Recherche</span> */}
               </button>
               <input
                 type="search"
@@ -58,8 +59,12 @@ export default function NavBar() {
             <NavLink to="/" className={Home ? "active-link" : null}>
               <div className="navBar-bottomMenuLink">ACCUEIL</div>
             </NavLink>
-            <div className="navBar-bottomMenuLink">BOUTIQUE</div>
-            <div className="navBar-bottomMenuLink">NOTRE HISTOIRE</div>
+            <NavLink to="/" className={"" ? "active-link" : null}>
+              <div className="navBar-bottomMenuLink">BOUTIQUE</div>
+            </NavLink>
+            <NavLink to="/" className={"" ? "active-link" : null}>
+              <div className="navBar-bottomMenuLink">NOTRE HISTOIRE</div>
+            </NavLink>
           </div>
         </div>
       </div>

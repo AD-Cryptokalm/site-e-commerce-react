@@ -78,6 +78,7 @@
         font-size: calc(1.5rem + 1vw);
         margin-right: 2.5rem;
         cursor: pointer;
+        color: $color1;
         
         &:hover {
             filter: brightness(1.5);
