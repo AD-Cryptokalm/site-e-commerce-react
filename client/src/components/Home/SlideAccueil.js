@@ -7,7 +7,7 @@ import slideImg from "../../images/slide1.png";
 
 export default function SlideAccueil() {
   return (
-    <Carousel className="carousel">
+    <Carousel className="carousel" autoPlay="true">
       <div>
         <img src={slideImg} alt="" />
       </div>
