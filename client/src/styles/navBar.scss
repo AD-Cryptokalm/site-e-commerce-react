@@ -59,6 +59,7 @@
             text-align: center;
             position: relative;
             bottom: 2.5rem;
+            right: -0.5rem;
         }
     }
     &-bottomLogo {
@@ -77,9 +78,18 @@
         font-size: calc(1.5rem + 1vw);
         margin-right: 2.5rem;
         cursor: pointer;
+        
         &:hover {
             filter: brightness(1.5);
           }
     }
     
 }
+.active-link {
+    color: $color1;
+    filter: brightness(1.5);
+    &:hover {
+        filter: none;
+    }
+}
+

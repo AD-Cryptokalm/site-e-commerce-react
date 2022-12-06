@@ -1,35 +1,30 @@
 import { NavLink } from "react-router-dom";
 import "../styles/navBar.scss";
+import Home from "./Home/Home";
 
 export default function NavBar() {
   return (
     <div className="navBar">
       <div className="navBar-top flex">
         <div className="navBar-topText">
-          Livraison gratuite à partir de 50 euros<br/> en France Métropolitaine
+          Livraison gratuite à partir de 50 euros
+          <br /> en France Métropolitaine
         </div>
         <div className="navBar-topMenu flex">
           <NavLink to="/account/login">
-          <div className="navBar-topMenuLink">Se connecter </div>
+            <div className="navBar-topMenuLink">Se connecter </div>
           </NavLink>
           <div> ou </div>
-    
-          <div className="navBar-topMenuLink"> Créer un compte</div>
+          <NavLink to="/account/register">
+            <div className="navBar-topMenuLink"> Créer un compte</div>
+          </NavLink>
           <div className="navBar-topMenuLink">
             <i className="fa-solid fa-cart-shopping navBar-iconCart"></i>
             Panier
           </div>
           <div className="navBar-formSearch">
-            <form
-              action="/search"
-              method="get"
-              className=""
-              role="search"
-            >
-              <button
-                type="submit"
-                className=""
-              >
+            <form action="/search" method="get" className="" role="search">
+              <button type="submit" className="">
                 <i className="fa-solid fa-magnifying-glass "></i>
                 {/* <span class="fallback-text">Recherche</span> */}
               </button>
@@ -50,9 +45,9 @@ export default function NavBar() {
       <div className="navBar-bottom flex">
         <div className="navBar-bottomRight">
           <NavLink to="/">
-          <div className="navBar-bottomLogo">
-            <img src="../images/logo.png" alt="logo entreprise" />
-          </div>
+            <div className="navBar-bottomLogo">
+              <img src="../images/logo.png" alt="logo entreprise" />
+            </div>
           </NavLink>
           <div className="navBar-bottomTitle">
             <h1>Mon Univers Enchanté</h1>
@@ -60,7 +55,9 @@ export default function NavBar() {
         </div>
         <div className="navBar-bottomLeft">
           <div className="navBar-bottomMenu flex">
-            <div className="navBar-bottomMenuLink">ACCUEIL</div>
+            <NavLink to="/" className={Home ? "active-link" : null}>
+              <div className="navBar-bottomMenuLink">ACCUEIL</div>
+            </NavLink>
             <div className="navBar-bottomMenuLink">BOUTIQUE</div>
             <div className="navBar-bottomMenuLink">NOTRE HISTOIRE</div>
           </div>
