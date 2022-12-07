@@ -1,7 +1,7 @@
 import "../../styles/loginForm.scss";
 import React, { useState } from "react";
 import axios from "axios";
-import Home from "../Home/Home";
+import Home from "../../pages/Home";
 // import Home from "../Home/Home";
 
 export default function LoginForm() {
@@ -22,6 +22,7 @@ export default function LoginForm() {
     })
       .then((res) => {
         console.log(res.data);
+        localStorage.setItem("uid", res.data.accessToken)
         setIsLogin(true);
       })
       .catch((err) => {

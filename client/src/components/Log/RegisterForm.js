@@ -1,7 +1,7 @@
 import "../../styles/loginForm.scss";
 import React, { useState } from "react";
 import axios from "axios";
-import Home from "../Home/Home";
+import Home from "../../pages/Home";
 // import Home from "../Home/Home";
 
 export default function RegisterForm() {

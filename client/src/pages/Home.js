@@ -1,6 +1,6 @@
 import React from 'react'
-import SlideAccueil from './SlideAccueil'
-import Categorie from './Categorie'
+import SlideAccueil from '../components/Home/SlideAccueil'
+import Categorie from '../components/Home/Categorie'
 
 export default function Home() {
   return (

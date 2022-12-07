@@ -1,8 +1,14 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/navBar.scss";
-import Home from "./Home/Home";
+import "../../styles/navBar.scss";
+import { UidContext } from "../context/authContext";
+import Logout from "../Log/Logout";
+// import Home from "../../pages/Home";
+// import Products from "../../pages/Products";
 
 export default function NavBar() {
+  const uid = useContext(UidContext);
+
   return (
     <div className="navBar">
       <div className="navBar-top flex">
@@ -11,18 +17,32 @@ export default function NavBar() {
           <br /> en France Métropolitaine
         </div>
         <div className="navBar-topMenu flex">
-          <NavLink to="/account/login">
-            <div className="navBar-topMenuLink">Se connecter </div>
-          </NavLink>
-          <div> ou </div>
-          <NavLink to="/account/register">
-            <div className="navBar-topMenuLink"> Créer un compte</div>
-          </NavLink>
-          <NavLink to="/cart">
-          <div className="navBar-topMenuLink">
-            <i className="fa-solid fa-cart-shopping navBar-iconCart"></i>
-            Panier
-          </div>
+          {uid ? (
+            <>
+              <NavLink to="/account/profil">
+                <div className="navBar-topMenuLink">Mon compte </div>
+              </NavLink>
+              <div> ou </div>
+              <>
+                <Logout/>
+              </>
+            </>
+          ) : (
+            <>
+              <NavLink to="/account/login">
+                <div className="navBar-topMenuLink">Se connecter </div>
+              </NavLink>
+              <div> ou </div>
+              <NavLink to="/account/register">
+                <div className="navBar-topMenuLink"> Créer un compte</div>
+              </NavLink>
+            </>
+          )}
+          <NavLink to="/660/cart">
+            <div className="navBar-topMenuLink">
+              <i className="fa-solid fa-cart-shopping navBar-iconCart"></i>
+              Panier
+            </div>
           </NavLink>
           <div className="navBar-formSearch">
             <form action="/search" method="get" className="" role="search">
@@ -56,13 +76,13 @@ export default function NavBar() {
         </div>
         <div className="navBar-bottomLeft">
           <div className="navBar-bottomMenu flex">
-            <NavLink to="/" className={Home ? "active-link" : null}>
+            <NavLink to="/">
               <div className="navBar-bottomMenuLink">ACCUEIL</div>
             </NavLink>
-            <NavLink to="/" className={"" ? "active-link" : null}>
+            <NavLink to="/products">
               <div className="navBar-bottomMenuLink">BOUTIQUE</div>
             </NavLink>
-            <NavLink to="/" className={"" ? "active-link" : null}>
+            <NavLink to="/">
               <div className="navBar-bottomMenuLink">NOTRE HISTOIRE</div>
             </NavLink>
           </div>

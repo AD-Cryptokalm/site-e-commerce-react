@@ -2,15 +2,20 @@
   "users": [
     {
       "email": "olivier@mail.com",
-      "password": "$2a$10$DbU9lR2VNPFTx3kYGbC36uaYP0dqiIBAWXjwQ.M1X5tp5DblK00n6",
+      "password": "$2a$10$OafCNl0XIy319Y8FgNZ2O.pBc6Or2s4LAVpJx4EHGy2P5uUAB6Oe2",
       "id": 1
     },
     {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$vD0Mv6UqFiWgqey5EtKlaOUnmw4iGKrXRRX4FuefQ.HEBTNV.3itC",
+      "id": 2
+    },
+    {
       "email": "nicolas.houliat@hotmail.fr",
-      "password": "$2a$10$9fSnKxuSl6044z9yDp.O/ewZZ2BpixBVT6mxWcJ/iZbYfo9QEusbm",
+      "password": "$2a$10$i5d.YY64uUEYoZ3RXLAZx.JB6s54S84vMtspJMbXfk11L2ePRtlFq",
       "firstname": "Nicolas",
       "lastname": "HOULIAT",
-      "id": 2
+      "id": 3
     }
   ]
 }
