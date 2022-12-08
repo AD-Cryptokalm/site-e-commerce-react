@@ -24,6 +24,7 @@ export default function LoginForm() {
         console.log(res.data);
         localStorage.setItem("uid", res.data.accessToken)
         setIsLogin(true);
+        window.location = '/'
       })
       .catch((err) => {
         console.log(err);

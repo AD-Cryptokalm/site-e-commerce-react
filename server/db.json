@@ -16,6 +16,27 @@
       "firstname": "Nicolas",
       "lastname": "HOULIAT",
       "id": 3
+    },
+    {
+      "email": "azerty@gmail.com",
+      "password": "$2a$10$RHyF6zfP596TaImhRKVpNeRfKxo.zs3Z6/QL6ctJN61aLCAifAGhy",
+      "firstname": "azerty",
+      "lastname": "azerty",
+      "id": 4
+    },
+    {
+      "email": "test1@gmail.com",
+      "password": "$2a$10$pNGnULzQFQT/UV.5W18OSOS/Uf8ZHPK6UYjuF2vWtv4YeWLfgVLnC",
+      "firstname": "Nicolas",
+      "lastname": "HOULIAT",
+      "id": 5
+    },
+    {
+      "email": "teamsaw14@gmail.com",
+      "password": "$2a$10$IK74PgFGDLloLFN7rUDCd.nva2yids5REEcGkYXwaa3cOf/z3F.lO",
+      "firstname": "Nicolas",
+      "lastname": "HOULIAT",
+      "id": 6
     }
   ]
 }
