@@ -2,12 +2,16 @@ import "../../styles/loginForm.scss";
 import React, { useState } from "react";
 import axios from "axios";
 import Home from "../../pages/Home";
+import { useDispatch } from "react-redux";
+import { getUser } from "../../actions/userAction";
 // import Home from "../Home/Home";
 
 export default function LoginForm() {
   const [isLogin, setIsLogin] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [user, setUser] = useState(null);
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -21,10 +25,11 @@ export default function LoginForm() {
       },
     })
       .then((res) => {
-        console.log(res.data);
-        localStorage.setItem("uid", res.data.accessToken)
+        setUser(res.data.user.id);
+        localStorage.setItem("token", res.data.accessToken);
+        localStorage.setItem("uid", res.data.user.id);
         setIsLogin(true);
-        window.location = '/'
+        window.location = "/";
       })
       .catch((err) => {
         console.log(err);
@@ -32,6 +37,8 @@ export default function LoginForm() {
         setPassword("");
       });
   };
+
+  if (user) dispatch(getUser(user))
 
   return (
     <>
