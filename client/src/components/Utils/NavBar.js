@@ -19,7 +19,7 @@ export default function NavBar() {
         <div className="navBar-topMenu flex">
           {uid ? (
             <>
-              <NavLink to="/account/profil">
+              <NavLink to="/account">
                 <div className="navBar-topMenuLink">Mon compte </div>
               </NavLink>
               <div> ou </div>
@@ -29,11 +29,11 @@ export default function NavBar() {
             </>
           ) : (
             <>
-              <NavLink to="/account/login">
+              <NavLink to="/login">
                 <div className="navBar-topMenuLink">Se connecter </div>
               </NavLink>
               <div> ou </div>
-              <NavLink to="/account/register">
+              <NavLink to="/register">
                 <div className="navBar-topMenuLink"> Créer un compte</div>
               </NavLink>
             </>

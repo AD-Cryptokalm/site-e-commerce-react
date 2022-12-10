@@ -26,7 +26,8 @@ export default function RegisterForm() {
     })
       .then((res) => {
         console.log(res.data);
-        localStorage.setItem("uid", res.data.accessToken)
+        localStorage.setItem("token", res.data.accessToken);
+        localStorage.setItem("uid", res.data.user.id);
         setIsLogin(true);
         window.location = '/'
       })

@@ -8,6 +8,8 @@ import RegisterForm from "./Log/RegisterForm";
 import NavBar from "./Utils/NavBar";
 import Page404 from "./Utils/Page404";
 import Products from "../pages/Products"
+import UpdateProfil from "../pages/UpdateProfil";
+import Account from "../pages/Account";
 
 export default function RoutesNavigate() {
   return (
@@ -16,9 +18,11 @@ export default function RoutesNavigate() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
-        <Route path="account/login" element={<LoginForm />} />
-        <Route path="account/register" element={<RegisterForm />} />
-        <Route path="660/cart" element={<Cart />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/profil" element={<UpdateProfil />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<Page404 />} />
         {/* <Route path="boutique" element={<Boutique />} />
         <Route path="about" element={<About />} />

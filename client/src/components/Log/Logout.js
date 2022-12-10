@@ -4,7 +4,7 @@ import React from 'react'
 export default function Logout() {
 
     const handlleLogout = () => {
-        localStorage.removeItem('uid')
+        localStorage.removeItem('token')
         window.location = "/";
     }
 
