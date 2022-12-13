@@ -5,6 +5,7 @@ export default function Logout() {
 
     const handlleLogout = () => {
         localStorage.removeItem('token')
+        localStorage.removeItem('uid')
         window.location = "/";
     }
 
@@ -13,3 +14,4 @@ export default function Logout() {
     <div className="navBar-topMenuLink" onClick={handlleLogout}> Se déconnecter</div>
   )
 }
+

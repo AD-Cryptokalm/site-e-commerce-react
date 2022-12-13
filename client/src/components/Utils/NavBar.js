@@ -38,7 +38,7 @@ export default function NavBar() {
               </NavLink>
             </>
           )}
-          <NavLink to="/660/cart">
+          <NavLink to="/cart">
             <div className="navBar-topMenuLink">
               <i className="fa-solid fa-cart-shopping navBar-iconCart"></i>
               Panier
