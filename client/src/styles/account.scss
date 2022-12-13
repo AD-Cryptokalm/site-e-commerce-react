@@ -1,0 +1,25 @@
+@import "./setting.scss";
+
+.account {
+    width: 80%;
+    margin: 10rem auto 0;
+    height: 50vh;
+    padding: 0 8%;
+    color: $color1;
+    & h2 {
+      font-size: calc(1.2rem + 1.4vw);
+    }
+    & h3 {
+      font-size: calc(1rem + 1.1vw);
+    }
+    & p {
+      font-size: calc(1rem + 0.9vw);
+    }
+    &-block {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &-left {
+        width: 50%;
+    }
+}
