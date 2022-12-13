@@ -10,6 +10,9 @@ export default function RegisterForm() {
   const [password, setPassword] = useState("");
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
+  const [adress, setAdress] = useState("");
+  const [postalCode, setPostalCode] = useState("");
+  const [city, setCity] = useState("");
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -22,6 +25,9 @@ export default function RegisterForm() {
         lastname,
         email,
         password,
+        adress,
+        postalCode,
+        city,
       },
     })
       .then((res) => {
@@ -29,7 +35,7 @@ export default function RegisterForm() {
         localStorage.setItem("token", res.data.accessToken);
         localStorage.setItem("uid", res.data.user.id);
         setIsLogin(true);
-        window.location = '/'
+        window.location = "/";
       })
       .catch((err) => {
         console.log(err);
@@ -78,7 +84,33 @@ export default function RegisterForm() {
               value={password}
               placeholder="Password"
             />
-            <input className="btn-form" type="submit" value="Se Connecter" />
+            {/* <input className="btn-form" type="submit" value="S'inscrire" /> */}
+            <input
+              type="text"
+              name="adress"
+              id="adress"
+              onChange={(e) => setAdress(e.target.value)}
+              value={adress}
+              placeholder="Adressse: N° et nom de la voix"
+            />
+            <input
+              type="text"
+              name="postalCode"
+              id="postalCode"
+              onChange={(e) => setPostalCode(e.target.value)}
+              value={postalCode}
+              placeholder="Code postal"
+            />
+            <input
+              type="text"
+              name="city"
+              id="city"
+              onChange={(e) => setCity(e.target.value)}
+              value={city}
+              placeholder="Ville"
+            />
+
+            <input className="btn-form" type="submit" value="S'inscrire" />
           </form>
         </div>
       )}

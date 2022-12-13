@@ -11,7 +11,7 @@ export default function Account() {
       <h2 className="account-tilte">Mon Compte</h2>
       <div className="account-block">
       <div className="account-left">
-        <h3 className="account-title">Historique des commandes</h3>
+        <h3 className="account-title">Historique des commande</h3>
         <p>Vous n'avez pas encore passé de commandes</p>
       </div>
       <div className="account-right">
