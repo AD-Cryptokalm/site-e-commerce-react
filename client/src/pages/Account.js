@@ -19,7 +19,9 @@ export default function Account() {
         <p className="account-name">
           {userData.firstname} {userData.lastname}
         </p>
-        <div className="account-adress">{userData.adress}</div>
+        <p className="account-adress">{userData.adress}</p>
+        <p className="account-adress">{userData.postalCode} {userData.city}</p>
+        <p className="account-adress"></p>
       </div>
       </div>
     </div>
